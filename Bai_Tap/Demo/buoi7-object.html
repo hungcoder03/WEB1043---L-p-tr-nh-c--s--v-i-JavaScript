@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dog = {
+            weight: '10kg',
+            color: 'trắng',
+            age: 2,
+            name: 'chó cỏ',
+            sua: function () {
+                return "Gâu gâu";
+            }
+        }
+        document.write("Tên của chó là: " + dog.name); //Truy xuất 1 thành phần của đối tượng
+        // document.write(dog["name"]); //Cách 2 truy xuất
+        document.write("<br>Tiếng sủa: " + dog.sua() + '<br>'); //Cách 2 truy xuất
+
+        // function Dog(dogName, Weight, Color, Age) {
+        //     this.dogName = dogName;
+        //     this.Weight = Weight;
+        //     this.Color = Color;
+        //     this.Age = Age;
+        // }
+        function Dog(name, weight, color, age ){
+            this.name = name;
+            this.weight = weight;
+            this.color = color;
+            this.age = age;
+            this.sua = function (){
+                return 'Go go';
+            }
+        }
+        // let dog1 = new Dog('Chi hua hua', 'Red', 4, 4.2);
+        // for (let i = 0; i < dog1.length; i++) {
+        //     document.write(dog1[i] + '<br>');
+        // }
+        // let arrDog = [
+        //     ['Rikky', '2kg', 'Black', 5],
+        //     ['A', '3kg', 'Black', 1],
+        //     ['B', '4kg', 'Black', 2],
+        //     ['C', '5kg', 'Black', 3],
+        //     ['D', '6kg', 'Black', 4],
+        //     ['E', '7kg', 'Black', 7],
+        //     ['F', '8kg', 'Black', 5],
+        //     ['G', '9kg', 'Black', 5],
+        // ];
+        let arrDog = [
+            ['Rikky','2kg','Black',2],
+            ['Laika', '5kg', 'Yellow', 5],
+            ['A', '5kg', 'Yellow', 5],
+            ['B', '10kg', 'G', 10],
+            ['C', '15kg', 'B', 15],
+            ['D', '20kg', 'WB', 8],
+            ['E', '30kg', 'B', 6],
+        ];
+        // //Duyệt mảng bằng vòng lặp for
+        // for (let i = 0; i < arrDog.length; i++) {
+        //     //Khởi tạo đối tượng Dog
+        //     let dogFather = arrDog[i];
+        //     let objDog = new Dog(dogFather[0], dogFather[1], dogFather[2], dogFather[3])
+        //     document.write('Tên: ' + objDog.name + '<br>');
+        // }
+        for(let i = 0; i < arrDog.length; i ++){
+            //Khởi tạo đối tượng Dog
+            let DogFather = arrDog[i];
+            let objDog = new Dog(DogFather[0], DogFather[1],DogFather[2],DogFather[3]);
+            document.write( 'Tên:' + objDog.name + '<br>');
+            document.write('Cân nặng:' +  objDog.weight + '<br>');
+        }
+        
+    </script>
+</body>
+
+</html>

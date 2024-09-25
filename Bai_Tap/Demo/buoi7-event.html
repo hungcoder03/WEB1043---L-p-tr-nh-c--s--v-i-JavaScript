@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sự kiện trong JS</h1>
+    <ul>
+        <li>onclick: Sự kiện xảy ra khi người dùng click vào phần tử</li>
+        <li>ondblclick: Sự kiện xảy ra khi người dùng double-click vào phần tử</li> 
+        <li>oncontextmenu: Sự kiện xảy ra khi người dùng click chuột phải để mở context menu (ấn phím menu trên bàn phím không được nhé)</li>
+        <li>onmousedown: Sự kiện xảy ra khi người dùng ấn một nút chuột trên phần tử (kể cả nút chuột giữa)</li>
+        <li>onmouseup: Sự kiện xảy ra khi người dùng thả nút chuột qua một phần tử</li>
+    </ul>
+    <ul>
+        <li>onmousemove: Sự kiện xảy ra khi con trỏ chuột di chuyển trên phần tử</li>
+        <li>onmouseenter: Sự kiện xảy ra khi con trỏ chuột di chuyển vào phần tử</li> 
+        <li>onmouseover: Sự kiện xảy ra khi con trỏ chuột di chuyển vào phần tử hoặc các con của nó</li>
+        <li>onmouseleave: Sự kiện xảy ra khi con trỏ chuột di chuyển ra khỏi phần tử</li>
+        <li>onmouseout: Sự kiện xảy ra khi con trỏ chuột di chuyển ra khỏi phần tử hoặc các con của nó.</li>
+    </ul>
+    <ul>
+        <li>onkeydown: Sự kiện xảy ra khi người dùng đang ấn 1 phím (sẽ được kích hoạt với tất cả các phím)</li>
+        <li>onkeypress: Sự kiện xảy ra khi người dùng ấn 1 phím (một số phím sẽ không kích hoạt sự kiện này như phím alt, shift, ctrl, esc, backspace, delete, các phím mũi tên...)</li> 
+        <li>onkeyup: Sự kiện xảy ra khi người dùng thả 1 phím</li>
+    </ul>
+    <ul>
+        <li>onresize: Sự kiện xảy ra khi người dùng thay đổi kích thước trình duyệt</li>
+        <li>onscroll: Sự kiện xảy ra khi thanh cuộn của phần tử đang được cuộn</li> 
+    </ul>
+    
+    <h1>Hôm nay làm gì?</h1>
+    <button onclick="hienThi('bong')">Bóng</button>
+    <button onclick="hienThi('game')">Chơi game</button>
+    <div id="ket_qua"></div>
+    <script>
+    function hienThi(parameter) {
+        if (parameter == 'game') {
+            document.getElementById('ket_qua').innerHTML += ("<h1>Bạn chọn Game</h1>");
+        } else if (parameter == 'bong') {
+            document.getElementById('ket_qua').innerHTML += ("<h1>Bạn chọn Bóng</h1>");
+        }
+    }
+    </script>
+    
+</body>
+</html>
